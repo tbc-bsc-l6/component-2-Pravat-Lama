@@ -14,8 +14,5 @@ class Controller extends BaseController
 
 class ProductController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(ProductMiddleware::class);
-    }
+    
 }
