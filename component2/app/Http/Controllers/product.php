@@ -7,9 +7,16 @@ use App\User;
 use App\Models\Category;
 class product extends Controller
 {
-    public function index(){
+    public function display(){
         $products = Category::all();
-        return view('index',
+        return view('display',
+        [
+            'products' => $products
+        ]);
+    }
+    public function addproduct(){
+        $products = Category::all();
+        return view('addproduct',
             [
                 'products' => $products
             ]);

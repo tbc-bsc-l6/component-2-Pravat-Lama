@@ -25,7 +25,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="title"><b>Title</b></label>
-                <select class="browser-default custom-select form-control" name="type" id="inputState">
+                <select class="browser-default custom-select form-control" name="product_type" id="inputState">
                     @if($products->product_type=="Book")
                         <option selected disabled value="Book" name="Book">Book</option>
                         <option value="CD" name="CD">CD</option>

@@ -1,44 +1,37 @@
-@extends('layout')
-@section('layout')
-            <div class="h1 text-center">
-                Add New Product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-9">
+            <img class="h-100 w-100" src="/img/welcome.png">
+        </div>
+        <div class="col-md-3 pt-5 mt-5">
+            <div class="card">
+                <div class="card-header text-white text-center bg-primary">Welcome to our site</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    <div class="text-center mt-5 mb-5">
+                        <a href="login" class="btn btn-primary btn-block">Login</a><br><br>
+                        <a href="register" class="btn btn-secondary btn-block">Signup</a><br><br>
+                        <a href="display" class="btn btn-info btn-block">Browse Products</a><br><br>
+                        <!-- <a href="display" class="btn btn-info btn-block">display</a> -->
+                    </div>
+                </div>
             </div>
-            <form class="w-100 mt-5" method="POST" action="{{url('add')}}" enctype="multipart/form-data">
-                @csrf
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="first_name">First Name</label>
-                        <input type="text" class="form-control" id="first_name" placeholder="First Name(optional)" name="first_name" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="last_name">Last Name</label>
-                        <input type="text" class="form-control" id="last_name" placeholder="surname / band" name="last_name" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="Title">Title</label>
-                    <input type="text" class="form-control" id="Title" placeholder="Title" name="title" required>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="price">Price</label>
-                        <input type="number" class="form-control" id="price" name="price" placeholder="Price" required>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="pages_playlength">Pages /Play Length</label>
-                        <input type="text" class="form-control" id="pages_playlength" name="pages_playlength" placeholder="Pages / Play Length" required>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="product_type">Type</label>
-                        <select class="browser-default custom-select form-control" name="product_type" id="inputState">
-                            <option selected disabled>Select your Title</option>
-                            <option value="CD" name="CD">CD</option>
-                            <option value="Book" name="Book">Book</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success">Submit</button>
-            </form>
-
-@endsection
+        </div>
+    </div>
+</body>
+</html>

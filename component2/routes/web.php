@@ -16,14 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/product', [product::class, 'product']);
+Route::get('/addproduct', [product::class, 'addproduct']);
+Route::get('/display', [product::class, 'display']);
 Route::post('/add', [product::class, 'add']);
 Route::get('/updateForm/{id}', [product::class, 'updateForm']);
 Route::put('/updateProduct/{id}', [product::class, 'updateProduct']);
