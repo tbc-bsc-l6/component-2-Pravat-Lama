@@ -26,7 +26,7 @@
                     <div class="text-center mt-5 mb-5">
                         <a href="login" class="btn btn-primary btn-block">Login</a><br><br>
                         <a href="register" class="btn btn-secondary btn-block">Signup</a><br><br>
-                        <a href="forgot-password" class="btn btn-info btn-block">Browse Products</a><br><br>
+                        <a href="product" class="btn btn-info btn-block">Browse Products</a><br><br>
                     </div>
                 </div>
             </div>

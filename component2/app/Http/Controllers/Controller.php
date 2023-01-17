@@ -11,3 +11,11 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
+
+class ProductController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware(ProductMiddleware::class);
+    }
+}
