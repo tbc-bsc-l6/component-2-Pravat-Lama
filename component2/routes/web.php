@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/product/{id}', 'ProductController@show')->name('product.show');
+Route::get('/product', [product::class, 'product']);
+Route::post('/add', [product::class, 'add']);
+Route::get('/updateForm/{id}', [product::class, 'updateForm']);
+Route::put('/updateProduct/{id}', [product::class, 'updateProduct']);
+Route::delete('/delete/{id}', [product::class, 'delete']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

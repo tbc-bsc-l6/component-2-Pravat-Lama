@@ -11,8 +11,3 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
-
-class ProductController extends Controller
-{
-    
-}
