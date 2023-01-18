@@ -37,7 +37,7 @@ class product extends Controller
 
     public function add(Request $request){
         Category::create($request->all());
-        return redirect('/');
+        return redirect('display');
     }
 
     public function delete(Request $request, $id){

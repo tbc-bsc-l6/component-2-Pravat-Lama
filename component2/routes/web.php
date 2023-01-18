@@ -23,6 +23,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/display', function(){
+    return view('display');
+})->middleware(['auth', 'is_admin'])->name('display');
+
 Route::get('/addproduct', [product::class, 'addproduct']);
 Route::get('/display', [product::class, 'display']);
 Route::post('/add', [product::class, 'add']);
@@ -37,3 +41,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
