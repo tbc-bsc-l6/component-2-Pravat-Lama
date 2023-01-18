@@ -42,6 +42,6 @@ class product extends Controller
 
     public function delete(Request $request, $id){
         Category::find($id)->delete();
-        return redirect('/');
+        return redirect('display');
     }
 }

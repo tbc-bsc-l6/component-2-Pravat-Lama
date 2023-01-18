@@ -26,8 +26,8 @@
                         <input type="number" class="form-control" id="price" name="price" placeholder="Price" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="pages_playlength">Pages /Play Length</label>
-                        <input type="text" class="form-control" id="pages_playlength" name="pages_playlength" placeholder="Pages / Play Length" required>
+                        <label for="image">image</label>
+                        <input type="text" class="form-control" id="image" name="image" placeholder="image" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="product_type">Type</label>
@@ -35,6 +35,7 @@
                             <option selected disabled>Select your Title</option>
                             <option value="CD" name="CD">CD</option>
                             <option value="Book" name="Book">Book</option>
+                            <option value="Game" name="Game">Game</option>
                         </select>
                     </div>
                 </div>

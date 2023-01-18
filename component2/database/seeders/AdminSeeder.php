@@ -20,14 +20,14 @@ class AdminSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@root.com',
             'email_verified_at' => now(),
-            'password' => crypt('root'), //'root' password is encrypted using crypt function
+            'password' => bcrypt('root'), //'root' password is encrypted using crypt function
             'is_admin' => true,
         ]);
         User::create([
             'name' => 'test',
             'email' => 'test@root.com',
             'email_verified_at' => now(),
-            'password' => crypt('test'), //'root' password is encrypted using crypt function
+            'password' => bcrypt('test'), //'root' password is encrypted using crypt function
             'is_admin' => false,
         ]);
     }

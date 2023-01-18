@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("first_name");
             $table->string("last_name");
             $table->float("price");
-            $table->float("pages_playlength");
+            $table->string("image");
             $table->string("product_type");
             $table->timestamps();
         });
