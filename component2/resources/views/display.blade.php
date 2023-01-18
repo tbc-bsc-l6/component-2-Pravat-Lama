@@ -10,6 +10,9 @@
 <x-app-layout>
     @extends('layout')
     @section('layout')
+    <div class="title">
+        <h1>Products</h1>
+    </div>
     @if(auth()->check() && auth()->user()->is_admin == 1)
         <a href="{{url('addproduct')}}" class="btn btn-primary mt-2 p-2">Add Product</a>
     @endif

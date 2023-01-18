@@ -33,9 +33,10 @@
                         <label for="product_type">Type</label>
                         <select class="browser-default custom-select form-control" name="product_type" id="inputState">
                             <option selected disabled>Select your Title</option>
-                            <option value="CD" name="CD">CD</option>
+                            <option value="Movie" name="Movie">Movie</option>
                             <option value="Book" name="Book">Book</option>
                             <option value="Game" name="Game">Game</option>
+                            <option value="Song" name="Song">Song</option>
                         </select>
                     </div>
                 </div>
