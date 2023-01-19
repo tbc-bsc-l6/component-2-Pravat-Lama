@@ -13,6 +13,7 @@
     <div class="title">
         <h1>Products</h1>
     </div>
+    
     @if(auth()->check() && auth()->user()->is_admin == 1)
         <a href="{{url('addproduct')}}" class="btn btn-primary mt-2 p-2">Add Product</a>
     @endif
@@ -24,7 +25,7 @@
                     <img src="/img/{{$product->image}}" alt="" class="product-image" />
                     @if(auth()->check() && auth()->user()->is_admin == 1)
                         <ul class="icons">
-                            <<a href="{{url('updateForm',$product->id)}}"><li><i class="fa fa-pencil-square-o"></i></li></a>
+                            <a href="{{url('updateForm',$product->id)}}"><li><i class="fa fa-pencil-square-o"></i></li></a>
                             <form action="{{url('delete',$product->id)}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('delete')
@@ -45,5 +46,7 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </div><br><br>
+        {{$products->links()}}
 </x-app-layout>
+

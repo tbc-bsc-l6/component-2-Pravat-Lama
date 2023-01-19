@@ -3,7 +3,7 @@
             <div class="h1 text-center">
                 Add New Product
             </div>
-            <form class="w-100 mt-5" method="POST" action="{{url('add')}}" enctype="multipart/form-data">
+            <form class="w-100 mt-5" method="POST" action="add" enctype="multipart/form-data">
                 @csrf
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -27,12 +27,12 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="image">image</label>
-                        <input type="text" class="form-control" id="image" name="image" placeholder="image" required>
+                        <input type="file" class="form-control" id="image" name="image" placeholder="image" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="product_type">Type</label>
                         <select class="browser-default custom-select form-control" name="product_type" id="inputState">
-                            <option selected disabled>Select your Title</option>
+                            <option selected disabled>Select your Product Type</option>
                             <option value="Movie" name="Movie">Movie</option>
                             <option value="Book" name="Book">Book</option>
                             <option value="Game" name="Game">Game</option>
